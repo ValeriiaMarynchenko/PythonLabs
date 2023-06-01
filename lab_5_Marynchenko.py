@@ -43,26 +43,12 @@ print(newlist)
 print()
 print("Завдання 4")
 
-n = 8
-m = 8
-tura = "I"
-for i in range(n):
-    for j in range(n):
-        if i == 0:
-            if j == 0:
-                matrix[i][j] = tura
-            elif j == 7:
-                matrix[i][j] = tura
-            else:
-                matrix[i][j] = "_"
-        elif i == 7:
-            if j == 0:
-                matrix[i][j] = tura
-            elif j == 7:
-                matrix[i][j] = tura
-            else:
-                matrix[i][j] = "_"
-        else:
-            matrix[i][j] = "_"
-for row in matrix:
-    print(' '.join([str(elem) for elem in row]))
+chessboard = [['_'] * 8 for _ in range(8)]
+
+chessboard[0][0] = 'I'
+chessboard[0][7] = 'I'
+chessboard[7][0] = 'I'
+chessboard[7][7] = 'I'
+
+for row in chessboard:
+    print(' '.join(row))
