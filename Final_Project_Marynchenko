@@ -74,7 +74,7 @@ print_board(board)
 # Визначення результату гри
 if "_" not in board[0] and "_" not in board[1] and "_" not in board[2]:
     print("Гра завершилась нічиєю!")
-elif any(row[0] == row[1] == row[2] != "_" for row in board) or any(board[0][col] == board[1][col] == board[2][col] != "_" for col in range(3)):
+elif any(row[0] == row[1] == row[2] == "X" for row in board) or any(board[0][col] == board[1][col] == board[2][col] == "X" for col in range(3)):
     print("Ви програли!")
 else:
     print("Ви виграли!")
